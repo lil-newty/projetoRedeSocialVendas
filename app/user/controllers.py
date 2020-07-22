@@ -8,7 +8,7 @@ import bcrypt
 user_api = Blueprint('user_api', __name__)
 
 
-@user_api.route('/user/login', methods=['POST'])
+@user_api.route('/users/login/', methods=['POST'])
 def login():
 
     data = request.json
@@ -62,7 +62,7 @@ def create():
 
 
 @user_api.route('/users/', methods=['GET'])
-@jwt_required
+# @jwt_required
 def index():
 
     data = request.args

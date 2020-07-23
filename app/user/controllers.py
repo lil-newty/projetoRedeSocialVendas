@@ -62,7 +62,7 @@ def create():
 
 
 @user_api.route('/users/', methods=['GET'])
-# @jwt_required
+@jwt_required
 def index():
 
     data = request.args

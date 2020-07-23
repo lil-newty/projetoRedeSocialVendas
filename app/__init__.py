@@ -3,6 +3,7 @@ from .config import Config
 from .extensions import db, jwt, migrate
 from .user.controllers import user_api
 from .product.controllers import product_api
+from .postagem.controllers import postagem_api
 
 
 def create_app():
@@ -15,5 +16,6 @@ def create_app():
 
     app.register_blueprint(user_api)
     app.register_blueprint(product_api)
+    app.register_blueprint(postagem_api)
 
     return app

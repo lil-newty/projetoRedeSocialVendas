@@ -53,7 +53,8 @@ def create():
                 email=email, 
                 idade=idade, 
                 permission=permission,
-                password_hash=password_hash)
+                password_hash=password_hash,
+                permission=permission)
 
     db.session.add(user)
     db.session.commit()
